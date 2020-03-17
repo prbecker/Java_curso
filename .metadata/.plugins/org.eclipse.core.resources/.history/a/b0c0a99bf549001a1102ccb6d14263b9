@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import Entities.Rectangle;
+
+public class ex1 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Rectangle rectangle = new Rectangle();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter rectangle width and height:");
+		rectangle.width = sc.nextDouble();
+		rectangle.height = sc.nextDouble();
+		
+		System.out.printf("AREA = %.2f%n", rectangle.Area());
+		System.out.printf("PERIMETER = %.2f%n", rectangle.Perimeter());
+		System.out.printf("DIAGONAL = %.2f%n", rectangle.Diagonal());
+		
+		sc.close();
+	}
+}

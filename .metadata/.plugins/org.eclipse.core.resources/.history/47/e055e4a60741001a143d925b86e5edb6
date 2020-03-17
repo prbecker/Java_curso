@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+//Leia 1 valor inteiro N, que representa o número de casos de teste que vem a seguir. Cada caso de teste consiste de 3 valores reais, cada um deles com uma casa decimal. Apresente a média ponderada para cada um destes
+//conjuntos de 3 valores, sendo que o primeiro valor tem peso 2, o segundo valor tem peso 3 e o terceiro valor tem peso 5.
+public class ex3For 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		int N, i;
+		double average, n1, n2, n3;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		N = sc.nextInt();
+		
+		for (i = 0; i < N; i++) 
+		{
+			n1 = sc.nextDouble();
+			n2 = sc.nextDouble();
+			n3 = sc.nextDouble();
+
+			average = ((2 * n1) + (3 * n2) + (5 * n3)) / 10;
+			System.out.printf("%.1f%n", average);
+		}
+
+		sc.close();
+	}
+}

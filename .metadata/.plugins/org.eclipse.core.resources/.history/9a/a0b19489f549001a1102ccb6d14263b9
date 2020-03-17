@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ex1 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+		int N, i, quadrado, cubo;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		N = sc.nextInt();
+		
+		for (i = 1; i <= N; i++) 
+		{
+			
+			quadrado = i * i;
+			cubo = i * i * i;
+			System.out.println(i + " " + quadrado + " " + cubo);
+		}
+
+		sc.close();
+	}
+}

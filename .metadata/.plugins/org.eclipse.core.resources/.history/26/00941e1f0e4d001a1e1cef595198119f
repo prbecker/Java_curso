@@ -1,0 +1,47 @@
+package Application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import Entities.Room;
+
+public class ex1 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		int numberOfRooms;
+		Room[] rooms = new Room[10];
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);	
+
+		System.out.println("How many rooms will be rented? ");	
+		numberOfRooms = sc.nextInt();
+		
+		for(int i=0; i<numberOfRooms; i++)
+		{
+			System.out.printf("Rent #%d:%n", i+1);
+			System.out.println("Nome: ");
+			String name = sc.nextLine();
+			sc.nextLine();
+			System.out.println("Email: ");
+			String email = sc.nextLine();
+			System.out.println("Room: ");
+			int roomNumber = sc.nextInt();
+			
+			rooms[roomNumber] = new Room(roomNumber, name, email, true);
+		}
+		
+		System.out.println("Busy rooms:");
+		for(int i=0; i<10; i++)
+		{
+			if(rooms[i] != null)
+			{
+				rooms[i].toString();
+			}
+		}
+		
+		sc.close();
+	}
+}

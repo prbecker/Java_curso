@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.Locale;
+
+public class ex4 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		int number;
+		int horas;
+		double valor;
+		double salary;
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+				
+		number = sc.nextInt();
+		horas = sc.nextInt();
+		valor = sc.nextDouble();
+				
+		salary = horas * valor;
+		System.out.println("NUMBER = " + number);
+		System.out.printf("SALARY = U$ %.2f" salary);
+				
+		sc.close();
+	}
+}

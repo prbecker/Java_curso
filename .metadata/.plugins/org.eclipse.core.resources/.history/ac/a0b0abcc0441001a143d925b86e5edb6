@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+//Leia um valor inteiro X (1 <= X <= 1000). Em seguida mostre os ímpares de 1 até X, um valor por linha, inclusive o X, se for o caso.
+public class ex1For 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		int X, i;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		X = sc.nextInt();
+		
+		if((X % 2) == 0)
+		{
+			for(i = 1; i < X; i++)
+			{
+				System.out.println(i);
+				i++;
+			}
+		}
+		else
+		{
+			for(i = 1; i <= X; i++)
+			{
+				System.out.println(i);
+				i++;
+			}
+		}
+
+		sc.close();
+	}
+}

@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class ex4 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		int inicio, fim, horas;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		inicio = sc.nextInt();
+		fim = sc.nextInt();
+		
+		if(inicio < fim)
+		{
+			horas = fim - inicio;
+			System.out.println("O JOGO DUROU " + horas + " HORA(S)");
+		}
+		else if(inicio > fim)
+		{
+			horas = 24 - inicio + fim;
+			System.out.println("O JOGO DUROU " + horas + " HORA(S)");
+		}
+		else
+		{
+			horas = 24;
+			System.out.println("O JOGO DUROU " + horas + " HORA(S)");
+		}
+		
+		sc.close();
+	}
+}

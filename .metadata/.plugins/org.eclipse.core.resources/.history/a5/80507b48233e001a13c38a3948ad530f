@@ -1,0 +1,33 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class ex6 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		double A, B, C, pi;
+		double triangulo, circulo, trapezio, quadrado, retangulo;
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		pi = 3.14159
+		A = sc.nextDouble();
+		B = sc.nextDouble();
+		C = sc.nextDouble();
+				
+		triangulo = (A * C) / 2;
+		circulo = Math.pow(C, 2) * pi;
+		trapezio = ((A + B) * C) / 2;
+		quadrado = Math.pow(B, 2);
+		retangulo = A * B;
+		System.out.printf("TRIANGULO: " + triangulo);
+		System.out.printf("CIRCULO: " + circulo);	
+		System.out.printf("TRAPEZIO: " + trapezio);
+		System.out.printf("QUADRADO: " + quadrado);
+		System.out.printf("RETANGULO: " + retangulo);
+		
+		sc.close();
+	}
+}

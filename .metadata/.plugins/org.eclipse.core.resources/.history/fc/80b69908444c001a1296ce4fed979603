@@ -1,0 +1,49 @@
+import java.util.Locale;
+import java.util.Scanner;
+import Entities.Account;
+
+public class ex1 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		int accountNumber;
+		String accountName;
+		double value = 0.00;
+		char initial;
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);	
+
+		System.out.println("Enter account number: ");
+		accountNumber = sc.nextInt();
+		System.out.println("Enter account holder: ");
+		accountName = sc.nextLine();
+		accountName = sc.nextLine();
+		System.out.println("Is there an initial deposit (y/n)?");
+		initial = sc.next().charAt(0);
+		if(initial == 'y')
+		{
+			System.out.println("Enter initial deposit value: ");
+			value = sc.nextDouble();
+		}
+		Account acc = new Account(accountNumber, accountName, value);
+		
+		System.out.println("Account data:");
+		System.out.printf("Account %d, Holder: %s, Balance: $ %.2f%n%n", acc.getNumber(), acc.getName(), acc.getBalance());
+		
+		System.out.println("Enter a deposit value: ");
+		value = sc.nextDouble();
+		acc.deposit(value);
+		System.out.printf("Updated account data: %.2f%n", value);
+		System.out.printf("Account %d, Holder: %s, Balance: $ %.2f%n%n", acc.getNumber(), acc.getName(), acc.getBalance());
+		
+		System.out.println("Enter a withdraw value: ");
+		value = sc.nextDouble();
+		acc.withdraw(value);
+		System.out.printf("Updated account data: ");
+		System.out.printf("Account %d, Holder: %s, Balance: $ %.2f%n", acc.getNumber(), acc.getName(), acc.getBalance());	
+		
+		sc.close();
+	}
+}
